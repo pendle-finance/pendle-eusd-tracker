@@ -53,11 +53,13 @@ async function fetchUserBalanceSnapshot(blockNumber) {
 }
 
 async function main() {
-  const BLOCK_NUMBER = 19318300;
+  const BLOCK_NUMBER = 19359102;
   const res = await fetchUserBalanceSnapshot(BLOCK_NUMBER);
-  for(let addr in res) {
-    console.log(`${addr} : ${res[addr].toString()}`);
-  }
+
+  console.log(res['0x599f8c6a0dc3a47760134f3739ed7019147e219a']);
+  // for(let addr in res) {
+  //   console.log(`${addr} : ${res[addr].toString()}`);
+  // }
 }
 
 main()
